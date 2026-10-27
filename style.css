@@ -1,0 +1,181 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  color: #172554;
+  background: linear-gradient(135deg, #dbeafe, #c4b5fd);
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+}
+
+header {
+  text-align: center;
+  padding: 15px;
+}
+
+header h1 {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.search-box {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+input {
+  flex: 1;
+  min-width: 0;
+  padding: 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  font-size: 16px;
+}
+
+button {
+  padding: 14px 22px;
+  border: none;
+  border-radius: 12px;
+  background: #2563eb;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.92);
+  padding: 24px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(30, 41, 59, 0.1);
+}
+
+.current {
+  text-align: center;
+}
+
+.weather-icon {
+  font-size: 60px;
+}
+
+.temperature {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 10px;
+}
+
+.details {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.detail {
+  padding: 16px 8px;
+  border-radius: 12px;
+  background: #eff6ff;
+}
+
+.detail strong {
+  display: block;
+  margin-top: 10px;
+}
+
+.forecast {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.day {
+  padding: 14px 5px;
+  text-align: center;
+  overflow-wrap: anywhere;
+  background: #eff6ff;
+  border-radius: 12px;
+}
+
+.day-icon {
+  font-size: 28px;
+  margin: 10px 0;
+}
+
+.day p {
+  font-weight: bold;
+}
+
+.message,
+.error {
+  padding: 12px;
+  text-align: center;
+}
+
+.error {
+  color: #b91c1c;
+  background: #fee2e2;
+  border-radius: 10px;
+}
+
+footer {
+  padding: 20px 5px;
+  text-align: center;
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  header h1 {
+    font-size: 25px;
+  }
+
+  .search-box {
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .details {
+    grid-template-columns: 1fr;
+  }
+
+  .forecast {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .temperature {
+    font-size: 40px;
+  }
+
+  .card {
+    padding: 16px;
+  }
+}
